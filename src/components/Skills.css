@@ -1,0 +1,156 @@
+.skills-section {
+  position: relative;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.skill-category {
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cat-color), transparent);
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.cat-icon {
+  font-size: 1.6rem;
+}
+
+.cat-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.skill-pct {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.skill-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+
+.skill-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: inherit;
+  box-shadow: 0 0 8px currentColor;
+  filter: brightness(1.5);
+}
+
+/* Tools */
+.tools-section {
+  text-align: center;
+}
+
+.tools-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tool-item {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.tool-item:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.08);
+}
+
+.tool-icon {
+  font-size: 1.2rem;
+}
+
+.tool-name {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+@media (max-width: 1000px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

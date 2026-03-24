@@ -1,0 +1,231 @@
+.contact-section {
+  position: relative;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-lead {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+/* Terminal block */
+.contact-terminal {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.terminal-body {
+  padding: 18px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.t-prompt {
+  color: var(--accent-green);
+  margin-right: 8px;
+}
+
+.t-cmd {
+  color: var(--accent-cyan);
+}
+
+.t-out {
+  color: var(--text-muted);
+  padding-left: 18px;
+}
+
+.t-cursor-blink {
+  color: var(--accent-cyan);
+  animation: blink 1s step-end infinite;
+  font-size: 0.9rem;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Contact links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-link-item {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.contact-link-item:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  min-width: 28px;
+  text-align: center;
+}
+
+.contact-link-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 3px;
+}
+
+.contact-link-value {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.arrow-icon {
+  margin-left: auto;
+  color: var(--text-muted);
+  transition: color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.contact-link-item:hover .arrow-icon {
+  color: var(--accent-cyan);
+  transform: translateX(4px);
+}
+
+/* Form */
+.contact-form {
+  overflow: hidden;
+}
+
+.form-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label-comment {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.label-text {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-blue);
+}
+
+.form-input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-green);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: none;
+  width: 100%;
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-input:focus {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.06);
+}
+
+.form-textarea {
+  line-height: 1.6;
+}
+
+[data-theme="light"] .form-input {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding: 15px;
+}
+
+.submit-btn.sent {
+  background: linear-gradient(135deg, var(--accent-green), #00cc66);
+  box-shadow: 0 8px 30px rgba(0, 255, 136, 0.3);
+}
+
+.submit-btn.sending {
+  opacity: 0.8;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(5, 11, 20, 0.3);
+  border-top-color: var(--bg-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* code dots */
+.code-dots {
+  display: flex;
+  gap: 6px;
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot.red { background: #ff5f57; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #28ca41; }
+.code-filename { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); }
+.code-header {
+  padding: 12px 16px;
+  background: rgba(0,0,0,0.2);
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

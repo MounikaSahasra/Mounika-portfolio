@@ -1,0 +1,27 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section divider glow line */
+.section + .section::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.08), transparent);
+  margin-bottom: 0;
+}
+
+/* Scroll-based parallax hint */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
