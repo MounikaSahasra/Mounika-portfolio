@@ -139,5 +139,5 @@
 
 .hero {
   padding-top: calc(var(--nav-height) + 20px);
-  min-height: 100svh;
+  min-height: ;
 }

@@ -154,9 +154,9 @@ img {
 
 /* ===== UTILITIES ===== */
 .section {
-  padding: 100px;
+  padding: 100px 0;
   position: relative;
-  scroll-margin-top: 80px;
+  scroll-margin-top: ;
   
 }
 

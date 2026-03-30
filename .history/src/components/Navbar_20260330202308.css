@@ -206,13 +206,3 @@
     display: none;
   }
 }
-@media (max-width: 480px) {
-  .nav-inner {
-    padding: 0 12px;
-  }
-
-  .nav-resume {
-    padding: 6px 12px;
-    font-size: 0.7rem;
-  }
-}
