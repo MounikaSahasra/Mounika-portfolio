@@ -12,7 +12,7 @@
   background: rgba(5, 11, 20, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 rgba(0, 212, 255, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 212, 255, 0.1);a
 }
 
 [data-theme="light"] .navbar.scrolled {
@@ -180,29 +180,5 @@
   }
   .hamburger {
     display: flex;
-  }
-}
-@media (max-width: 768px) {
-  .nav-inner {
-    padding: 0 16px;
-  }
-
-  .nav-actions {
-    gap: 8px;
-  }
-
-  .theme-toggle {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-  }
-
-  .nav-logo {
-    font-size: 0.95rem;
-  }
-}
-@media (max-width: 768px) {
-  .badge {
-    display: none;
   }
 }

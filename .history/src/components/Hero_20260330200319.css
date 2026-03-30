@@ -1,10 +1,10 @@
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 30px;
     text-align: center;
-    padding: 30px 0;
+    gap: 40px;
+    padding: 40px 0 20px;
   }
 
   .hero-content {
@@ -20,7 +20,7 @@
   }
 
   .hero-bio {
-    margin: 0 auto 30px;
+    margin: 0 auto 36px;
   }
 
   .hero-actions {

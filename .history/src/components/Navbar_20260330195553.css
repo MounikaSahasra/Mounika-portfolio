@@ -182,27 +182,3 @@
     display: flex;
   }
 }
-@media (max-width: 768px) {
-  .nav-inner {
-    padding: 0 16px;
-  }
-
-  .nav-actions {
-    gap: 8px;
-  }
-
-  .theme-toggle {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-  }
-
-  .nav-logo {
-    font-size: 0.95rem;
-  }
-}
-@media (max-width: 768px) {
-  .badge {
-    display: none;
-  }
-}
